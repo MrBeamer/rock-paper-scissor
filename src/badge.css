@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --scissor: #ec9e0e;
+}
+
+.container {
+  width: 1200px;
+  margin: 200px auto;
+  background: rgb(31, 55, 86);
+  background: linear-gradient(
+    180deg,
+    rgba(31, 55, 86, 1) 0%,
+    rgba(20, 21, 57, 1) 100%
+  );
+}
+
+.badge,
+.badge__circle {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.badge {
+  height: 200px;
+  width: 200px;
+}
+
+.badge__circle {
+  height: 149px;
+  width: 149px;
+  background-color: white;
+}
+
+.badge--rock {
+}
+
+.badge--paper {
+}
+
+.badge--scissors {
+  background: rgb(236, 158, 14);
+  background: linear-gradient(
+    0deg,
+    rgba(236, 158, 14, 1) 0%,
+    rgba(236, 169, 34, 1) 100%
+  );
+  /* background-color: hsl(40, 84%, 53%); */
+  box-shadow: inset 0px -8.5px 3px -1px hsl(39, 95%, 36%);
+}
+
+.badge__icon {
+  height: 70px;
+}
