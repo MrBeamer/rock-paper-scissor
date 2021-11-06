@@ -43,9 +43,25 @@
 }
 
 .badge--rock {
+  background: rgb(220, 46, 78);
+  background: linear-gradient(
+    0deg,
+    rgba(220, 46, 78, 1) 0%,
+    rgba(221, 64, 93, 1) 100%
+  );
+
+  box-shadow: inset 0px -8.5px 2px -1px #9f1632;
 }
 
 .badge--paper {
+  background: rgb(72, 101, 244);
+  background: linear-gradient(
+    0deg,
+    rgba(72, 101, 244, 1) 0%,
+    rgba(86, 113, 245, 1) 100%
+  );
+
+  box-shadow: inset 0px -8.5px 2px -1px #3144b7;
 }
 
 .badge--scissors {
@@ -56,7 +72,8 @@
     rgba(236, 169, 34, 1) 100%
   );
   /* background-color: hsl(40, 84%, 53%); */
-  box-shadow: inset 0px -8.5px 3px -1px hsl(39, 95%, 36%);
+  /* box-shadow: inset 0px -8.5px 2px -1px hsl(39, 95%, 36%); */
+  box-shadow: inset 0px -8.5px 2px -1px #d78321;
 }
 
 .badge__icon {

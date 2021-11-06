@@ -1,14 +1,11 @@
 import React from "react";
 
 export default function Badge(props) {
+  const { badgeColor, badgeIcon } = props;
   return (
-    <div className="badge badge--scissors">
+    <div className={`badge ${badgeColor}`}>
       <div className="badge__circle">
-        <img
-          className="badge__icon"
-          src="/images/icon-rock.svg"
-          alt="rock icon"
-        ></img>
+        <img className="badge__icon" src={badgeIcon} alt="rock icon"></img>
       </div>
     </div>
   );
