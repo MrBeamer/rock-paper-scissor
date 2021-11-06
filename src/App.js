@@ -1,15 +1,12 @@
-import "./app.css";
-import Badge from "./components/Badge";
+import "./css/app.css";
+import Scoreboard from "./components/Scoreboard";
+import Game from "./components/Game";
 
 function App() {
   return (
     <div className="container">
-      <Badge badgeColor={"badge--rock"} badgeIcon={"/images/icon-rock.svg"} />
-      <Badge badgeColor={"badge--paper"} badgeIcon={"/images/icon-paper.svg"} />
-      <Badge
-        badgeColor={"badge--scissors"}
-        badgeIcon={"/images/icon-scissors.svg"}
-      />
+      <Scoreboard />
+      <Game />
     </div>
   );
 }

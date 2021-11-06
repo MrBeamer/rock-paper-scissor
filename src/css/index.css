@@ -1,0 +1,18 @@
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+body {
+  /* background: rgb(31, 55, 86); */
+  background: linear-gradient(
+    180deg,
+    rgba(31, 55, 86, 1) 0%,
+    rgba(20, 21, 57, 1) 100%
+  );
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.container {
+  width: 960px;
+  margin: 55px auto;
+}

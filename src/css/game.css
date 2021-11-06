@@ -1,0 +1,30 @@
+.game {
+  display: grid;
+  max-width: 960px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin-top: 65px;
+}
+
+.game__background {
+  grid-column: 1/ -1;
+  grid-row: 1 / 3;
+  align-self: end;
+  height: 314px;
+}
+
+.game__rock {
+  grid-column: 1/ -1;
+  grid-row: 2/ 3;
+}
+
+.game__paper {
+  grid-column: 1/ 2;
+  grid-row: 1 / 2;
+}
+
+.game__scissors {
+  grid-column: 2/ 3;
+  grid-row: 1 / 2;
+}
