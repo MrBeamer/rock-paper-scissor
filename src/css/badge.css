@@ -23,6 +23,9 @@
 .badge {
   height: 200px;
   width: 200px;
+
+  /* 180
+  125 */
 }
 
 .badge__icon {
@@ -33,6 +36,7 @@
   height: 149px;
   width: 149px;
   background-color: white;
+  box-shadow: inset 0px 8.5px 2px -1px #c6c1d2;
 }
 
 .badge--rock {
