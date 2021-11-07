@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Badge from "./Badge";
 
 export default function SelectionScreen(props) {
