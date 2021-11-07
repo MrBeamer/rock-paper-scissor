@@ -7,12 +7,12 @@ import SelectionScreen from "./components/SelectionScreen";
 function App() {
   const [playerSelected, setPlayerSelected] = useState("");
   const [houseSelected, setHouseSelected] = useState("");
-
-  console.log(playerSelected);
+  const [gameResult, setGameResult] = useState("");
+  const [score, setScore] = useState(0);
+  console.log(gameResult);
 
   function houseSelection() {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
-    console.log(randomNumber);
 
     switch (randomNumber) {
       case 1:
@@ -29,12 +29,50 @@ function App() {
     }
   }
 
+  function determineWinner() {
+    console.log("player: " + playerSelected);
+    console.log("house: " + houseSelected);
+    if (playerSelected === "paper" && houseSelected === "rock") {
+      console.log("player wins");
+      setGameResult("YOU WIN");
+      updateScore();
+    }
+    if (playerSelected === "rock" && houseSelected === "scissors") {
+      setGameResult("YOU WIN");
+      updateScore();
+    }
+    if (playerSelected === "scissors" && houseSelected === "paper") {
+      setGameResult("YOU WIN");
+      updateScore();
+    }
+
+    if (playerSelected === "paper" && houseSelected === "scissors") {
+      setGameResult("YOU LOSE");
+    }
+    if (playerSelected === "rock" && houseSelected === "paper") {
+      setGameResult("YOU LOSE");
+    }
+    if (playerSelected === "scissors" && houseSelected === "rock") {
+      setGameResult("YOU LOSE");
+    } else {
+      setGameResult("DRAW");
+    }
+  }
+
+  function updateScore() {
+    // gameResult === "YOU WIN"
+    //   ? setScore((prevScore) => prevScore + 1)
+    //   : setScore(score);
+    setScore((prevScore) => prevScore + 1);
+  }
+
   return (
     <div className="container">
-      <Scoreboard />
+      <Scoreboard score={score} />
       <StartScreen
         setPlayerSelected={setPlayerSelected}
         houseSelection={houseSelection}
+        determineWinner={determineWinner}
       />
       <SelectionScreen
         playerSelected={playerSelected}

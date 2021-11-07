@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import Badge from "./Badge";
 
 export default function StartScreen(props) {
-  const { setPlayerSelected, houseSelection } = props;
-  const [gameStarted, setGameStarted] = useState(false);
+  const { setPlayerSelected, houseSelection, determineWinner } = props;
+  // const [gameStarted, setGameStarted] = useState(false);
 
   function handleClick(event) {
     const badgeId = event.currentTarget.id;
     setPlayerSelected(badgeId);
 
     // generates random rock, paper, scissors for the house
+    // houseSelection(() => {
+    //   determineWinner();
+    // });
+
     houseSelection();
+    determineWinner();
   }
 
   return (
