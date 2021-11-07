@@ -1,5 +1,6 @@
 .game {
   display: grid;
+  column-gap: 80px;
   max-width: 960px;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -22,9 +23,11 @@
 .game__paper {
   grid-column: 1/ 2;
   grid-row: 1 / 2;
+  justify-self: end;
 }
 
 .game__scissors {
   grid-column: 2/ 3;
   grid-row: 1 / 2;
+  justify-self: start;
 }
