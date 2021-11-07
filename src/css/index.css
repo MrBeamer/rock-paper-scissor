@@ -12,6 +12,10 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
+button {
+  border: none;
+}
+
 .container {
   width: 960px;
   margin: 55px auto;
