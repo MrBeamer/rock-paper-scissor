@@ -1,12 +1,14 @@
 import "./css/app.css";
 import Scoreboard from "./components/Scoreboard";
-import Game from "./components/Game";
+import StartScreen from "./components/StartScreen";
+import SelectionScreen from "./components/SelectionScreen";
 
 function App() {
   return (
     <div className="container">
       <Scoreboard />
-      <Game />
+      <StartScreen />
+      <SelectionScreen />
     </div>
   );
 }

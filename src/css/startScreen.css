@@ -1,4 +1,4 @@
-.game {
+.start-screen {
   display: grid;
   column-gap: 80px;
   max-width: 960px;
@@ -8,25 +8,25 @@
   margin-top: 65px;
 }
 
-.game__background {
+.start-screen__background {
   grid-column: 1/ -1;
   grid-row: 1 / 3;
   align-self: end;
   height: 314px;
 }
 
-.game__rock {
+.start-screen__rock {
   grid-column: 1/ -1;
   grid-row: 2/ 3;
 }
 
-.game__paper {
+.start-screen__paper {
   grid-column: 1/ 2;
   grid-row: 1 / 2;
   justify-self: end;
 }
 
-.game__scissors {
+.start-screen__scissors {
   grid-column: 2/ 3;
   grid-row: 1 / 2;
   justify-self: start;
