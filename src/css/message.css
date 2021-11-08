@@ -1,0 +1,21 @@
+.message {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.message__title {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.message__button {
+  background-color: #fff;
+  color: linear-gradient(
+    0deg,
+    rgba(72, 101, 244, 1) 0%,
+    rgba(86, 113, 245, 1) 100%
+  );
+  padding: 20px 60px;
+  border-radius: 8px;
+}

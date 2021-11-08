@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./css/app.css";
 import Scoreboard from "./components/Scoreboard";
 import StartScreen from "./components/StartScreen";
 import SelectionScreen from "./components/SelectionScreen";
+import Message from "./components/Message";
 
 function App() {
+  const [gameStarted, setGameStarted] = useState(false);
   const [playerSelected, setPlayerSelected] = useState("");
   const [houseSelected, setHouseSelected] = useState("");
   const [gameResult, setGameResult] = useState("");
   const [score, setScore] = useState(0);
-  console.log(gameResult);
 
   function houseSelection() {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -29,35 +30,29 @@ function App() {
     }
   }
 
-  function determineWinner() {
-    console.log("player: " + playerSelected);
-    console.log("house: " + houseSelected);
-    if (playerSelected === "paper" && houseSelected === "rock") {
-      console.log("player wins");
-      setGameResult("YOU WIN");
-      updateScore();
-    }
-    if (playerSelected === "rock" && houseSelected === "scissors") {
-      setGameResult("YOU WIN");
-      updateScore();
-    }
-    if (playerSelected === "scissors" && houseSelected === "paper") {
-      setGameResult("YOU WIN");
-      updateScore();
-    }
-
-    if (playerSelected === "paper" && houseSelected === "scissors") {
-      setGameResult("YOU LOSE");
-    }
-    if (playerSelected === "rock" && houseSelected === "paper") {
-      setGameResult("YOU LOSE");
-    }
-    if (playerSelected === "scissors" && houseSelected === "rock") {
-      setGameResult("YOU LOSE");
-    } else {
-      setGameResult("DRAW");
-    }
-  }
+  // function determineWinner() {
+  //   console.log("player: " + playerSelected);
+  //   console.log("house: " + houseSelected);
+  //   if (playerSelected === "paper" && houseSelected === "rock") {
+  //     console.log("player wins");
+  //     setGameResult("YOU WIN");
+  //     updateScore();
+  //   } else if (playerSelected === "rock" && houseSelected === "scissors") {
+  //     setGameResult("YOU WIN");
+  //     updateScore();
+  //   } else if (playerSelected === "scissors" && houseSelected === "paper") {
+  //     setGameResult("YOU WIN");
+  //     updateScore();
+  //   } else if (playerSelected === "paper" && houseSelected === "scissors") {
+  //     setGameResult("YOU LOSE");
+  //   } else if (playerSelected === "rock" && houseSelected === "paper") {
+  //     setGameResult("YOU LOSE");
+  //   } else if (playerSelected === "scissors" && houseSelected === "rock") {
+  //     setGameResult("YOU LOSE");
+  //   } else {
+  //     setGameResult("DRAW");
+  //   }
+  // }
 
   function updateScore() {
     // gameResult === "YOU WIN"
@@ -66,18 +61,50 @@ function App() {
     setScore((prevScore) => prevScore + 1);
   }
 
+  useEffect(() => {
+    function determineWinner() {
+      console.log("player: " + playerSelected);
+      console.log("house: " + houseSelected);
+      if (playerSelected === "paper" && houseSelected === "rock") {
+        console.log("player wins");
+        setGameResult("YOU WIN");
+        updateScore();
+      } else if (playerSelected === "rock" && houseSelected === "scissors") {
+        setGameResult("YOU WIN");
+        updateScore();
+      } else if (playerSelected === "scissors" && houseSelected === "paper") {
+        setGameResult("YOU WIN");
+        updateScore();
+      } else if (playerSelected === "paper" && houseSelected === "scissors") {
+        setGameResult("YOU LOSE");
+      } else if (playerSelected === "rock" && houseSelected === "paper") {
+        setGameResult("YOU LOSE");
+      } else if (playerSelected === "scissors" && houseSelected === "rock") {
+        setGameResult("YOU LOSE");
+      } else {
+        setGameResult("DRAW");
+      }
+    }
+    determineWinner();
+  }, [playerSelected, houseSelected]);
+
   return (
     <div className="container">
       <Scoreboard score={score} />
-      <StartScreen
-        setPlayerSelected={setPlayerSelected}
-        houseSelection={houseSelection}
-        determineWinner={determineWinner}
-      />
-      <SelectionScreen
-        playerSelected={playerSelected}
-        houseSelected={houseSelected}
-      />
+
+      {gameStarted ? (
+        <SelectionScreen
+          playerSelected={playerSelected}
+          houseSelected={houseSelected}
+        />
+      ) : (
+        <StartScreen
+          setGameStarted={setGameStarted}
+          setPlayerSelected={setPlayerSelected}
+          houseSelection={houseSelection}
+        />
+      )}
+      <Message gameResult={gameResult} />
     </div>
   );
 }

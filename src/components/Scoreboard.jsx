@@ -12,3 +12,5 @@ export default function Scoreboard(props) {
     </div>
   );
 }
+
+// fix the aszync problem of the states its always one behind
