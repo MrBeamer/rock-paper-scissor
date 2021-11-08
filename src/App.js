@@ -88,6 +88,13 @@ function App() {
     determineWinner();
   }, [playerSelected, houseSelected]);
 
+  function resetGame() {
+    setGameStarted(false);
+    setPlayerSelected("");
+    setHouseSelected("");
+    setGameResult("");
+  }
+
   return (
     <div className="container">
       <Scoreboard score={score} />
@@ -104,7 +111,7 @@ function App() {
           houseSelection={houseSelection}
         />
       )}
-      <Message gameResult={gameResult} />
+      <Message gameResult={gameResult} resetGame={resetGame} />
     </div>
   );
 }
