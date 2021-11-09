@@ -70,3 +70,21 @@
   );
   box-shadow: inset 0px -8.5px 2px -1px #d78321;
 }
+
+.start-screen__scissors,
+.start-screen__rock,
+.start-screen__paper {
+  transition: all 0.3s;
+}
+
+.start-screen__scissors:hover,
+.start-screen__rock:hover,
+.start-screen__paper:hover {
+  transform: scale(1.1);
+}
+
+.start-screen__scissors:focus,
+.start-screen__rock:focus,
+.start-screen__paper:focus {
+  transform: scale(1);
+}

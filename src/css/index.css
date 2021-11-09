@@ -1,6 +1,13 @@
 @import-normalize;
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
+html,
+body,
+#app,
+#app > div {
+  height: 100%;
+}
+
 body {
   /* background: rgb(31, 55, 86); */
   background: linear-gradient(
@@ -19,4 +26,11 @@ button {
 .container {
   max-width: 960px;
   margin: 55px auto;
+
+  /* testing */
+  position: relative;
+}
+
+.hidden {
+  display: hidden;
 }

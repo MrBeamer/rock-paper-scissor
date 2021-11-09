@@ -11,6 +11,7 @@ function App() {
   const [houseSelected, setHouseSelected] = useState("");
   const [gameResult, setGameResult] = useState("");
   const [score, setScore] = useState(0);
+  const [show, setShow] = useState(false);
 
   function houseSelection() {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -29,30 +30,6 @@ function App() {
         console.log("error");
     }
   }
-
-  // function determineWinner() {
-  //   console.log("player: " + playerSelected);
-  //   console.log("house: " + houseSelected);
-  //   if (playerSelected === "paper" && houseSelected === "rock") {
-  //     console.log("player wins");
-  //     setGameResult("YOU WIN");
-  //     updateScore();
-  //   } else if (playerSelected === "rock" && houseSelected === "scissors") {
-  //     setGameResult("YOU WIN");
-  //     updateScore();
-  //   } else if (playerSelected === "scissors" && houseSelected === "paper") {
-  //     setGameResult("YOU WIN");
-  //     updateScore();
-  //   } else if (playerSelected === "paper" && houseSelected === "scissors") {
-  //     setGameResult("YOU LOSE");
-  //   } else if (playerSelected === "rock" && houseSelected === "paper") {
-  //     setGameResult("YOU LOSE");
-  //   } else if (playerSelected === "scissors" && houseSelected === "rock") {
-  //     setGameResult("YOU LOSE");
-  //   } else {
-  //     setGameResult("DRAW");
-  //   }
-  // }
 
   function updateScore() {
     // gameResult === "YOU WIN"
@@ -88,11 +65,21 @@ function App() {
     determineWinner();
   }, [playerSelected, houseSelected]);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShow(true);
+    }, 3600);
+
+    //cleanup delay debounce
+    return () => clearTimeout(timeout);
+  }, [gameResult]);
+
   function resetGame() {
     setGameStarted(false);
     setPlayerSelected("");
     setHouseSelected("");
     setGameResult("");
+    setShow(false);
   }
 
   return (
@@ -111,7 +98,13 @@ function App() {
           houseSelection={houseSelection}
         />
       )}
-      <Message gameResult={gameResult} resetGame={resetGame} />
+      {show ? (
+        <Message
+          gameResult={gameResult}
+          resetGame={resetGame}
+          gameStarted={gameStarted}
+        />
+      ) : null}
     </div>
   );
 }

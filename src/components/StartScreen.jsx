@@ -5,8 +5,8 @@ export default function StartScreen(props) {
   const { setPlayerSelected, houseSelection, setGameStarted } = props;
 
   function handleClick(event) {
-    const badgeId = event.currentTarget.id;
     setGameStarted(true);
+    const badgeId = event.currentTarget.id;
     setPlayerSelected(badgeId, houseSelection());
   }
 
