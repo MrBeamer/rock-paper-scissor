@@ -4,7 +4,6 @@ import Scoreboard from "./components/Scoreboard";
 import StartScreen from "./components/StartScreen";
 import SelectionScreen from "./components/SelectionScreen";
 import Message from "./components/Message";
-import Rules from "./components/Rules";
 
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
