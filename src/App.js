@@ -111,7 +111,7 @@ function App() {
           gameStarted={gameStarted}
         />
       ) : null}
-      <Rules />
+      {/* <Rules /> */}
     </div>
   );
 }
