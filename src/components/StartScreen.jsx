@@ -1,4 +1,5 @@
 import React from "react";
+import "animate.css";
 import Badge from "./Badge";
 
 export default function StartScreen(props) {
@@ -11,7 +12,7 @@ export default function StartScreen(props) {
   }
 
   return (
-    <div className="start-screen">
+    <div className="start-screen animate__animated animate__fadeIn">
       <img
         className="start-screen__background"
         src="/images/bg-triangle.svg"
