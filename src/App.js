@@ -65,6 +65,7 @@ function App() {
     determineWinner();
   }, [playerSelected, houseSelected]);
 
+  //delays the rendering of the message
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShow(true);

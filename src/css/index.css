@@ -1,15 +1,14 @@
 @import-normalize;
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
-html,
-body,
-#app,
-#app > div {
+html {
   height: 100%;
 }
 
 body {
-  /* background: rgb(31, 55, 86); */
+  height: 100%;
+  margin: 0;
+  background: rgb(31, 55, 86);
   background: linear-gradient(
     180deg,
     rgba(31, 55, 86, 1) 0%,
@@ -17,6 +16,8 @@ body {
   );
 
   font-family: "Barlow Semi Condensed", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 button {

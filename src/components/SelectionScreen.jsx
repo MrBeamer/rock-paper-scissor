@@ -7,6 +7,7 @@ export default function SelectionScreen(props) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    //delays the rendering of the houseSelected coin and the animation called move block
     const timeout = setTimeout(() => {
       setShow(true);
     }, 900);
