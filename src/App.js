@@ -4,6 +4,7 @@ import Scoreboard from "./components/Scoreboard";
 import StartScreen from "./components/StartScreen";
 import SelectionScreen from "./components/SelectionScreen";
 import Message from "./components/Message";
+import Rules from "./components/Rules";
 
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
@@ -47,10 +48,7 @@ function App() {
 
   useEffect(() => {
     function determineWinner() {
-      console.log("player: " + playerSelected);
-      console.log("house: " + houseSelected);
       if (playerSelected === "paper" && houseSelected === "rock") {
-        console.log("player wins");
         setGameResult("YOU WIN");
         updateScore();
       } else if (playerSelected === "rock" && houseSelected === "scissors") {
@@ -93,7 +91,6 @@ function App() {
   return (
     <div className="container">
       <Scoreboard score={score} />
-
       {gameStarted ? (
         <SelectionScreen
           playerSelected={playerSelected}
@@ -114,6 +111,7 @@ function App() {
           gameStarted={gameStarted}
         />
       ) : null}
+      <Rules />
     </div>
   );
 }
