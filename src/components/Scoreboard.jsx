@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Scoreboard(props) {
   const { score } = props;
+
   return (
     <div className="scoreboard">
       <img src="/images/logo.svg" alt="logo" />
@@ -12,5 +13,3 @@ export default function Scoreboard(props) {
     </div>
   );
 }
-
-// fix the aszync problem of the states its always one behind

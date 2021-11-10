@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Badge from "./Badge";
-import Message from "./Message";
-
+import "animate.css";
 export default function SelectionScreen(props) {
   const { playerSelected, houseSelected } = props;
   const [show, setShow] = useState(false);
@@ -32,7 +31,7 @@ export default function SelectionScreen(props) {
         <h2 className="selection__title">THE HOUSE PICKED</h2>
         {show ? (
           <Badge
-            customClasses={`badge--${houseSelected}`}
+            customClasses={`badge--${houseSelected} animate__animated animate__flip`}
             badgeIcon={`/images/icon-${houseSelected}.svg`}
             id={houseSelected}
           />

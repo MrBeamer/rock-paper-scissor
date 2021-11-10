@@ -35,7 +35,14 @@ function App() {
     // gameResult === "YOU WIN"
     //   ? setScore((prevScore) => prevScore + 1)
     //   : setScore(score);
-    setScore((prevScore) => prevScore + 1);
+    // setScore((prevScore) => prevScore + 1);
+
+    //delays the rendering of the score => because its needs to be synchronous with the message
+    const timeout = setTimeout(() => {
+      setScore((prevScore) => prevScore + 1);
+    }, 3600);
+    //cleanup delay debounce
+    return () => clearTimeout(timeout);
   }
 
   useEffect(() => {
