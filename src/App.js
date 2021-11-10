@@ -98,6 +98,7 @@ function App() {
         <SelectionScreen
           playerSelected={playerSelected}
           houseSelected={houseSelected}
+          gameResult={gameResult}
         />
       ) : (
         <StartScreen

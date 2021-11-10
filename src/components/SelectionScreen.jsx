@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Badge from "./Badge";
 import "animate.css";
 export default function SelectionScreen(props) {
-  const { playerSelected, houseSelected } = props;
+  const { playerSelected, houseSelected, gameResult } = props;
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -23,6 +23,7 @@ export default function SelectionScreen(props) {
           badgeIcon={`/images/icon-${playerSelected}.svg`}
           id={playerSelected}
         />
+        {gameResult === "YOU WIN" ? <div className="ripple"></div> : null}
       </div>
 
       <div className={show ? "move-block" : "placeholder"}></div>
@@ -38,6 +39,7 @@ export default function SelectionScreen(props) {
         ) : (
           <div className="selection__placeholder"></div>
         )}
+        {gameResult === "YOU LOSE" ? <div className="ripple"></div> : null}
       </div>
     </div>
   );
