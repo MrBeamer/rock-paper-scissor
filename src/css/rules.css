@@ -1,15 +1,3 @@
-.modal {
-  /* position: absolute; */
-  /* bottom: -30px; */
-  /* right: -220px; */
-  /* right: -23%;
-  bottom: 3.5%; */
-
-  /* testing */
-  /* bottom: 0;
-  right: 0; */
-}
-
 .modal__button {
   padding: 0.625rem 2.5rem;
   background-color: transparent;
@@ -42,6 +30,7 @@
 .modal__headline {
   font-size: 2rem;
   font-weight: 500;
+  color: hsl(229, 25%, 31%);
 }
 
 .modal__header {

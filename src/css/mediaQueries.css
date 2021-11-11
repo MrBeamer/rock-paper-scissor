@@ -4,7 +4,6 @@
   }
 }
 
-/* 675 */
 @media only screen and (max-width: 740px) {
   html {
     font-size: 10px;
@@ -20,6 +19,7 @@
   .container {
     margin: 45px 20px 0 20px;
     height: fit-content;
+    /* maybe remove height because of iphone resolution black bar */
   }
 
   .message {
