@@ -1,22 +1,25 @@
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 980px) {
+  .container {
+    margin: 55px 20px;
+  }
+}
+
+/* 675 */
+@media only screen and (max-width: 625px) {
   html {
-    /* font-size: 10px; or 9 */
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .container {
     margin: 55px 20px;
   }
 
-  .move-block {
-    /* display: none; */
-  }
-
   .message {
-    left: 15%;
-    bottom: 9%;
-    margin-top: 0;
+    margin-top: 80px;
+    position: relative;
     text-align: center;
+    left: 0;
+    bottom: 0;
   }
 
   .ripple {
@@ -31,24 +34,11 @@
     left: -20px;
   }
 
-  .selection__frame--player {
-    position: relative;
-    justify-content: flex-end;
-    max-width: fit-content;
-    flex: 1;
-    order: -1;
+  .selection {
+    gap: 40px;
   }
 
-  .selection__frame--house {
-    position: relative;
-    justify-content: flex-start;
-    align-content: center;
-    max-width: fit-content;
-    flex: 1;
-    order: 1;
-  }
-
-  .selection__placeholder {
-    flex: 1;
+  .move-block {
+    animation: none;
   }
 }

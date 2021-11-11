@@ -43,7 +43,7 @@
 .move-block {
   flex: 0;
   transition: flex 1s;
-  border: 1px solid limegreen;
+  /* border: 1px solid limegreen; */
   position: relative;
   animation: move 2s forwards;
   animation-timing-function: ease-in-out;
