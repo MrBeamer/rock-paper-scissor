@@ -6,7 +6,7 @@ export default function Scoreboard(props) {
 
   return (
     <div className="scoreboard">
-      <img src="/images/logo.svg" alt="logo" />
+      <img className="scoreboard__img" src="/images/logo.svg" alt="logo" />
       <Rules />
       <div className="scoreboard__display">
         <p className="scoreboard__title">Score</p>

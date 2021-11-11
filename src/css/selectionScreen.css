@@ -34,15 +34,15 @@
 .selection__placeholder {
   justify-content: flex-start;
   background-color: #131639a2;
-  height: 200px;
-  width: 200px;
+  height: 12.5rem;
+  width: 12.5rem;
   border-radius: 50%;
 }
 
 .move-block {
   flex: 0;
   transition: flex 1s;
-  /* border: 1px solid limegreen; */
+  border: 1px solid limegreen;
   position: relative;
   animation: move 2s forwards;
   animation-timing-function: ease-in-out;

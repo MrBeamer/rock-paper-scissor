@@ -6,12 +6,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --white: #fff;
-  --black: #000;
-  --scissor: #ec9e0e;
-}
-
 .badge,
 .badge__circle {
   display: grid;
@@ -21,21 +15,19 @@
 }
 
 .badge {
-  height: 200px;
-  width: 200px;
+  height: 12.5rem;
+  width: 12.5rem;
   cursor: pointer;
-  /* 180
-  125 */
 }
 
 .badge__icon {
-  height: 70px;
+  height: 4.375rem;
 }
 
 .badge__circle {
-  height: 149px;
-  width: 149px;
-  background-color: white;
+  height: 9.313rem;
+  width: 9.313rem;
+  background-color: #fff;
   box-shadow: inset 0px 8.5px 2px -1px #c6c1d2;
 }
 

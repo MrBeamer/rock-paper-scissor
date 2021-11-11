@@ -1,0 +1,32 @@
+@media only screen and (max-width: 675px) {
+  html {
+    font-size: 10px;
+  }
+
+  .container {
+    margin: 55px 20px;
+  }
+
+  .move-block {
+    display: none;
+  }
+
+  .message {
+    left: 15%;
+    bottom: 9%;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .ripple {
+    left: 45%;
+    bottom: 30%;
+  }
+
+  .modal__popup {
+    width: 100vw;
+    height: 100vh;
+    top: -55px;
+    left: -20px;
+  }
+}

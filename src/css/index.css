@@ -25,6 +25,7 @@ button {
 }
 
 .container {
+  height: 618px;
   max-width: 960px;
   margin: 55px auto;
 
