@@ -79,6 +79,10 @@ function App() {
     return () => clearTimeout(timeout);
   }, [gameResult]);
 
+  useEffect(() => {
+    setShow(false);
+  }, []);
+
   function resetGame() {
     setGameStarted(false);
     setPlayerSelected("");
