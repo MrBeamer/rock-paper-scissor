@@ -19,8 +19,9 @@
 
   .container {
     margin: 55px 20px;
-    height: 590px;
-    /* height: fit-content; */
+    /* height: 590px; */
+    height: fit-content;
+    margin-bottom: 0;
   }
 
   .message {
