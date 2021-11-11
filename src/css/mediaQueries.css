@@ -19,12 +19,13 @@
 
   .container {
     margin: 55px 20px;
+    height: 590px;
     /* height: fit-content; */
   }
 
   .message {
     /* margin-top: 80px; */
-    margin-top: 40px;
+    margin-top: 60px;
     position: relative;
     text-align: center;
     top: 0;
