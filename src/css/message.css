@@ -20,11 +20,6 @@
   font-weight: 600;
   letter-spacing: 1.3px;
   background-color: #fff;
-  color: linear-gradient(
-    0deg,
-    rgba(72, 101, 244, 1) 0%,
-    rgba(86, 113, 245, 1) 100%
-  );
   padding: 15px 60px;
   border-radius: 8px;
 }
