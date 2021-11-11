@@ -21,11 +21,17 @@ export default function Rules() {
         className={`modal__popup animate__animated animate__fadeIn`}
         hidden={hidden}
       >
-        <div className="modal__header">
-          <h2 className="modal__headline">RULES</h2>
-          <i onClick={hideModal} className="fas fa-times"></i>
+        <div className="modal__fix">
+          <div className="modal__header">
+            <h2 className="modal__headline">RULES</h2>
+            <i onClick={hideModal} className="fas fa-times"></i>
+          </div>
+          <img
+            className="modal__img"
+            src="/images/image-rules.svg"
+            alt="rules"
+          />
         </div>
-        <img className="modal__img" src="/images/image-rules.svg" alt="rules" />
       </div>
     </div>
   );

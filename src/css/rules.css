@@ -34,6 +34,11 @@
   margin-right: auto;
 }
 
+.modal__fix {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal__headline {
   font-size: 2rem;
   font-weight: 500;
