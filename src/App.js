@@ -104,7 +104,11 @@ function App() {
         />
       )}
       {show && gameResult !== "" ? (
-        <Message gameResult={gameResult} resetGame={resetGame} />
+        <Message
+          gameResult={gameResult}
+          resetGame={resetGame}
+          gameStarted={gameStarted}
+        />
       ) : null}
     </div>
   );
