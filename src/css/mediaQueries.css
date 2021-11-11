@@ -23,6 +23,11 @@
     left: 0;
     bottom: 0;
     border: none;
+    -webkit-appearance: none;
+  }
+
+  .message__button {
+    -webkit-appearance: none;
   }
 
   .ripple {
