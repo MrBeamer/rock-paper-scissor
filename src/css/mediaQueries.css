@@ -8,6 +8,7 @@
 @media only screen and (max-width: 625px) {
   html {
     font-size: 10px;
+    overflow: hidden;
   }
 
   .container {
@@ -20,6 +21,7 @@
     text-align: center;
     left: 0;
     bottom: 0;
+    border: none;
   }
 
   .ripple {
