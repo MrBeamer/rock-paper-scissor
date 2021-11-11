@@ -19,7 +19,7 @@
 
   .container {
     margin: 55px 20px;
-    height: fit-content;
+    /* height: fit-content; */
   }
 
   .message {
