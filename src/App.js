@@ -79,10 +79,6 @@ function App() {
     return () => clearTimeout(timeout);
   }, [gameResult]);
 
-  useEffect(() => {
-    setShow(false);
-  }, []);
-
   function resetGame() {
     setGameStarted(false);
     setPlayerSelected("");
@@ -107,7 +103,7 @@ function App() {
           houseSelection={houseSelection}
         />
       )}
-      {show ? (
+      {show && gameResult !== "" ? (
         <Message
           gameResult={gameResult}
           resetGame={resetGame}
