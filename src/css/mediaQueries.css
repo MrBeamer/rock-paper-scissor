@@ -1,6 +1,7 @@
 @media only screen and (max-width: 675px) {
   html {
-    font-size: 10px;
+    /* font-size: 10px; or 9 */
+    font-size: 9px;
   }
 
   .container {
@@ -8,7 +9,7 @@
   }
 
   .move-block {
-    display: none;
+    /* display: none; */
   }
 
   .message {
@@ -28,5 +29,26 @@
     height: 100vh;
     top: -55px;
     left: -20px;
+  }
+
+  .selection__frame--player {
+    position: relative;
+    justify-content: flex-end;
+    max-width: fit-content;
+    flex: 1;
+    order: -1;
+  }
+
+  .selection__frame--house {
+    position: relative;
+    justify-content: flex-start;
+    align-content: center;
+    max-width: fit-content;
+    flex: 1;
+    order: 1;
+  }
+
+  .selection__placeholder {
+    flex: 1;
   }
 }
