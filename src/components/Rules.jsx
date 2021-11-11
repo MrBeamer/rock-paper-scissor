@@ -25,7 +25,7 @@ export default function Rules() {
           <h2 className="modal__headline">RULES</h2>
           <i onClick={hideModal} className="fas fa-times"></i>
         </div>
-        <img src="/images/image-rules.svg" alt="rules" />
+        <img className="modal__img" src="/images/image-rules.svg" alt="rules" />
       </div>
     </div>
   );
